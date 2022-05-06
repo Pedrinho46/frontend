@@ -1,0 +1,27 @@
+.botoes_pedro {
+  margin: 0.2%;
+  font-weight: bolder;
+  height: 150px;
+  
+}
+.pedro{
+  max-width: 45ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cadastro {
+  margin: 0.5%;
+  font-weight: bolder;
+}
+body{
+  background-color: E0FFFF;
+}
+.campo{
+margin-bottom: 1em;
+}
+.campo label{
+margin-bottom: 0.2em;
+color: grey;
+display: block;
+}
