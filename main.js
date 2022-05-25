@@ -12,8 +12,8 @@ $.ajax({
             if (resultado.alert_time != null) {
                 if (resultado.dif <= 5) {
                     document.getElementById("ativos").innerHTML += `
-                    <div onClick="abrir_modal(${resultado.id})" class=" ativos" style="max-width: 28rem;">
-                    <div class="">${resultado.name}</div> 
+                    <div onClick="abrir_modal(${resultado.id})" class=" ativos card text-white" style="max-width: 28rem;">
+                    <div class="fontemaior">${resultado.name}</div> 
                     <div class="card-body">
                         <p style="text-decoration:none; color: white " target="_blank" href="https://wa.me/55${resultado.number}" class=" h3 card-title">${resultado.number}</p> 
                         

@@ -3,6 +3,7 @@
   background: rgb(6, 172, 42);
   font-weight: bolder;
   text-align: center;
+  margin: 0.50%;
 }
 
 .inativos{
@@ -10,6 +11,7 @@
   background: #e92d2d;
   font-weight: bolder;
   text-align: center;
+  margin: 0.50%;
 }
 
 .semuso{
@@ -17,6 +19,7 @@
   border-radius: 20px;
   font-weight: bolder;
   text-align: center;
+  margin: 0.50%;
 }
 
 body{
