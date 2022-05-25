@@ -5,7 +5,7 @@ setTimeout(function () {
 
 $.ajax({
     type: "get", // NOME DO METODO HTTP QUE VAMOS USAR
-    url: "http://192.168.0.23:3333/api/v1/alarm", //URL DE ONDE VOCE VAI BUSCAR
+    url: "https://jsonplaceholder.typicode.com/todos", //URL DE ONDE VOCE VAI BUSCAR
     success: function (vitirnho) { // SE DER CERTO COMO VAI SRE O NOME DO MEUN
         vitirnho.map(function (resultado, i) {
             console.log(resultado)
@@ -54,13 +54,13 @@ function abrir_modal(id){
     $('#exampleModal').modal('show');     			
     $.ajax({
         type: "get", // NOME DO METODO HTTP QUE VAMOS USAR
-        url: "http://192.168.0.23:3333/api/v1/numbers/"+id, //URL DE ONDE VOCE VAI BUSCAR
+        url: "https://jsonplaceholder.typicode.com/todos"+id, //URL DE ONDE VOCE VAI BUSCAR
         success: function (vitirnho) { // SE DER CERTO COMO VAI SRE O NOME DO MEUN           
             document.getElementById("numero").value = ''
             document.getElementById("numero").value = vitirnho.number
             $.ajax({
                 type: "get", // NOME DO METODO HTTP QUE VAMOS USAR
-                url: "http://192.168.0.23:3333/api/v1/clients/"+vitirnho.client_id, //URL DE ONDE VOCE VAI BUSCAR
+                url: "https://jsonplaceholder.typicode.com/todos"+vitirnho.client_id, //URL DE ONDE VOCE VAI BUSCAR
                 success: function (vitirnho2) { // SE DER CERTO COMO VAI SRE O NOME DO MEUN           
                     document.getElementById("nome").value = ''
                     document.getElementById("nome").value = vitirnho2.name
@@ -83,7 +83,7 @@ function editar_cliente (id) {
 
     $.ajax({
         type: "put", // NOME DO METODO HTTP QUE VAMOS USAR
-        url: "http://192.168.0.23:3333/api/v1/clients/"+id, //URL DE ONDE VOCE VAI BUSCAR
+        url: "https://jsonplaceholder.typicode.com/todos"+id, //URL DE ONDE VOCE VAI BUSCAR
         data: {
             name: nome,
         },

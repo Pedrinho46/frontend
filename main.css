@@ -2,6 +2,7 @@
   margin: 0.2%;
   font-weight: bolder;
   height: 150px;
+  border-radius: 40px;
   
 }
 .pedro{
@@ -9,19 +10,65 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border-radius: 40px;
 }
 .cadastro {
   margin: 0.5%;
   font-weight: bolder;
 }
 body{
-  background-color: E0FFFF;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+ background: #3e3e3e;
+
 }
-.campo{
-margin-bottom: 1em;
+.seach-box{
+  position: center;
+  background: #909695;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.seach-txt{
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: azure;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+
+
 .campo label{
 margin-bottom: 0.2em;
 color: grey;
 display: block;
+}
+.ima{
+  height: 25;
+  width: 25;
+}
+
+.ativos{
+  position: center;
+  background: #909695;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sem_uso {
+  margin: 0.2%;
+  font-weight: bolder;
+  height: 150px;
+  border-radius: 40px;
+  color: rgb(243, 247, 246);
+  text-align: center;
 }

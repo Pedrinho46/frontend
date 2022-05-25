@@ -27,9 +27,15 @@
   <div class="container">
     <div class="row">
 
-      <h1 class="col-12">
-        <center>Relatorio de Emulações Ativas</center>
-      </h1>
+      <div class="seach-box">
+
+        <input type="text" class="seach-txt" placeholder="Pesquisar...">
+          <a href="#" class="seach-btn">
+          <img class="ima" src="lupa.svg" alt="lupa">
+
+        </a>
+
+      </div>
 <br>
 <br>
 <br>
@@ -54,23 +60,14 @@
                     <label for="Numero do cliente"><strong>Numero do Cliente</strong></label>
                     <input type="text" name="Numero do cliente" id="numero">
                   </div>
-                  <div>
-                    <label><strong class="campo">Selecione o tipo do Numero</strong></label>
-                    <select id="tipo">
-                      <option selectvalue=""></option>
-                      <option>Movel</option>
-                      <option>Fixo</option>
-                      <option>0800</option>
-                     </select>
-
-
-                  </div>
+               
                 </fieldset>
               </form>
             </div>
             <div class="modal-footer">
               <div id="botao"></div>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salvar</button>
             </div>
           </div>
         </div>
@@ -82,7 +79,7 @@
     <div id="ativos" class="row row-cols-1 row-cols-md-6 g-4"></div>
     <br>
 
-    <div id="semuso" class="row row-cols-1 row-cols-md-6 g-4"></div>
+    <div id="semuso" class="row row-cols-1 row-cols-md-2 g-2"></div>
     
     <div>
     </div>
