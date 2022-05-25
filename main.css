@@ -1,31 +1,43 @@
-.botoes_pedro {
-  margin: 0.2%;
+.ativos{
+  border-radius: 20px;
+  background: rgb(6, 172, 42);
   font-weight: bolder;
-  height: 150px;
-  border-radius: 40px;
+  text-align: center;
+}
+
+.inativos{
+  border-radius: 20px;
+  background: #e92d2d;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.semuso{
+  background: #e0e805;
+  border-radius: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+body{
+  background-color: black;
   
 }
-.pedro{
-  max-width: 45ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  border-radius: 40px;
-}
-.cadastro {
-  margin: 0.5%;
-  font-weight: bolder;
-}
-body{
-  margin: 0;
-  height: 100%;
-  width: 100%;
- background: #3e3e3e;
 
+.fontemaior{
+  font-size: 33px; 
+  
 }
+
+.rodape{
+  font-size: 25px;
+  height: 55;
+  
+}
+
 .seach-box{
   position: center;
-  background: #909695;
+  background: #fff;
   height: 40px;
   border-radius: 40px;
   display: flex;
@@ -37,38 +49,14 @@ body{
   background: none;
   outline: none;
   padding: 0;
-  color: azure;
+  width: 2045;
+  color: rgb(5, 5, 5);
   font-size: 16px;
   line-height: 40px;
 }
 
-
-
-.campo label{
-margin-bottom: 0.2em;
-color: grey;
-display: block;
-}
 .ima{
   height: 25;
   width: 25;
-}
-
-.ativos{
-  position: center;
-  background: #909695;
-  height: 40px;
-  border-radius: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sem_uso {
-  margin: 0.2%;
-  font-weight: bolder;
-  height: 150px;
-  border-radius: 40px;
-  color: rgb(243, 247, 246);
-  text-align: center;
+  border-radius: 20px;
 }
