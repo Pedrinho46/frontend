@@ -14,7 +14,7 @@ $.ajax({
                     document.getElementById("ativos").innerHTML += `
                     <div onClick="abrir_modal(${resultado.id})" class=" ativos card text-white" style="max-width: 28rem;">
                     <div class="fontemaior">${resultado.name}</div> 
-                    <div class="card-body">
+                    <div class="card-body fontemaior">
                         <p style="text-decoration:none; color: white " target="_blank" href="https://wa.me/55${resultado.number}" class=" h3 card-title">${resultado.number}</p> 
                         
                     </div>
