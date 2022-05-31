@@ -11,15 +11,15 @@
   background: #e92d2d;
   font-weight: bolder;
   text-align: center;
-  margin: 0.50%;
+  margin: 0.1%;
 }
 
 .semuso{
-  background: #e0e805;
   border-radius: 20px;
+  background: #f3fa31;
   font-weight: bolder;
   text-align: center;
-  margin: 0.50%;
+  margin: 0.1%;
 }
 
 body{
@@ -33,7 +33,7 @@ body{
 }
 
 .rodape{
-  font-size: 25px;
+  font-size: 28px;
   height: 55;
   
 }
@@ -63,3 +63,5 @@ body{
   width: 25;
   border-radius: 20px;
 }
+
+

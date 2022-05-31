@@ -14,8 +14,8 @@ $.ajax({
                     document.getElementById("ativos").innerHTML += `
                     <div onClick="abrir_modal(${resultado.id})" class=" ativos card text-white" style="max-width: 28rem;">
                     <div class="fontemaior">${resultado.name}</div> 
-                    <div class="card-body fontemaior">
-                        <p style="text-decoration:none; color: white " target="_blank" href="https://wa.me/55${resultado.number}" class=" h3 card-title">${resultado.number}</p> 
+                    <div class=" fontemaior card-body">
+                        <p style="text-decoration:none; color: white " target="_blank" href="https://wa.me/55${resultado.number}" class="">${resultado.number}</p> 
                         
                     </div>
                     <div><p class="rodape">O ultimo envio foi a ${resultado.dif} Minutos</p>
@@ -25,11 +25,11 @@ $.ajax({
 
                 } else {
                     document.getElementById("inativos").innerHTML += `
-              <div onClick="abrir_modal(${resultado.id})" class="inativos card text-white ">
+              <div onClick="abrir_modal(${resultado.id})" class="inativos card text-white" style="max-width: 28rem; ">
                 <div class="fontemaior">${resultado.name}</div>
                 
-                <div class="card-body">
-                    <a style="text-decoration:none ;color: white" target="_blank" href="https://wa.me/55${resultado.number}" class=" h3 card-title">${resultado.number}</a>
+                <div class="fontemaior card-body">
+                    <a style="text-decoration:none ;color: white" target="_blank" href="https://wa.me/55${resultado.number}" class="">${resultado.number}</a>
                    
                 </div>
                 <div> <p class="rodape">O ultimo envio foi a ${resultado.dif} Minutos</p></div>
@@ -41,10 +41,10 @@ $.ajax({
             } else {
            
               document.getElementById("semuso").innerHTML += `
-              <div onClick="abrir_modal(${resultado.id})" class="semuso card text-dark bg-warning mb-3" style="max-width: 15rem;">
-                <div class="card-header pedro">${resultado.name}</div>
+              <div onClick="abrir_modal(${resultado.id})" class="semuso card text-Black" style="max-width: 28rem;">
+                <div class="fontemaior">${resultado.name}</div>
                 <div class="card-body">
-                    <a style="text-decoration:none; color: black" target="_blank" href="https://wa.me/55${resultado.number}" class=" h3 card-title">${resultado.number}</a>
+                    <a style="text-decoration:none; color: black" target="_blank" href="https://wa.me/55${resultado.number}"">${resultado.number}</a>
                    
                 </div>
                 <div> <p class="card-text">SEM USO</p></div>
