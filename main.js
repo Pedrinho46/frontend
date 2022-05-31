@@ -43,7 +43,7 @@ $.ajax({
               document.getElementById("semuso").innerHTML += `
               <div onClick="abrir_modal(${resultado.id})" class="semuso card text-Black" style="max-width: 28rem;">
                 <div class="fontemaior">${resultado.name}</div>
-                <div class="card-body">
+                <div class="fontemaior card-body">
                     <a style="text-decoration:none; color: black" target="_blank" href="https://wa.me/55${resultado.number}"">${resultado.number}</a>
                    
                 </div>
