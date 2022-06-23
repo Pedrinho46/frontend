@@ -3,28 +3,39 @@ setTimeout(function () {
 }, 180000 ); // 3 minutos
 
 
+
+
+
 $.ajax({
     type: "get", // NOME DO METODO HTTP QUE VAMOS USAR
     url: "http://144.126.132.210:3334/api/v1/alarm", //URL DE ONDE VOCE VAI BUSCAR
+  
     success: function (vitirnho) { // SE DER CERTO COMO VAI SRE O NOME DO MEUN
         vitirnho.map(function (resultado, i) {
-            console.log(resultado)
-            if (resultado.alert_time != null) {
+            
+             if (resultado.alert_time != null) {
                 if (resultado.dif <= 5) {
+                   if(resultado.status === true){
+                   
+                   //}
                     document.getElementById("ativos").innerHTML += `
                     <div onClick="abrir_modal(${resultado.id})" class=" ativos card text-white" style="max-width: 28rem;">
                     <div class="fontemaior">${resultado.name}</div> 
                     <div class=" fontemaior card-body">
-                        <p style="text-decoration:none; color: white " target="_blank" href="https://wa.me/55${resultado.number}" class="">${resultado.number}</p> 
+                        <a style="text-decoration:none; color: white " target="_blank" href="https://wa.me/55${resultado.number}" class="">${resultado.number}</a> 
                         
                     </div>
                     <div><p class="rodape">O ultimo envio foi a ${resultado.dif} Minutos</p>
                     </div>
                     </div>
                     `; 
+                 }
 
-                } else {
-                    document.getElementById("inativos").innerHTML += `
+             } else if(resultado.dif > 6 && resultado.status != false ){
+                
+                console.log(resultado.status)
+
+             document.getElementById("inativos").innerHTML += `
               <div onClick="abrir_modal(${resultado.id})" class="inativos card text-white" style="max-width: 28rem; ">
                 <div class="fontemaior">${resultado.name}</div>
                 
@@ -37,20 +48,25 @@ $.ajax({
                 </div>
                 
               `;
-                }
-            } else {
-           
-              document.getElementById("semuso").innerHTML += `
-              <div onClick="abrir_modal(${resultado.id})" class="semuso card text-Black" style="max-width: 28rem;">
-                <div class="fontemaior">${resultado.name}</div>
-                <div class="fontemaior card-body">
-                    <a style="text-decoration:none; color: black" target="_blank" href="https://wa.me/55${resultado.number}"">${resultado.number}</a>
+         
+              }
+            // } else if(resultado.status === false){
+            //     document.getElementById("semuso").innerHTML += `<h1>${resultado.name}<h1/>`
+            // } else {
+            // document.getElementById("semuso").innerHTML += `
+            //   <div onClick="abrir_modal(${resultado.id})" class="semuso card text-Black" style="max-width: 28rem;">
+            //     <div class="fontemaior">${resultado.name}</div>
+            //     <div class="fontemaior card-body">
+            //         <a style="text-decoration:none; color: black" target="_blank" href="https://wa.me/55${resultado.number}"">${resultado.number}</a>
                    
-                </div>
-                <div> <p class="card-text">SEM USO</p></div>
-                </div>
-              `;
-            }
+            //     </div>
+            //     <div> <p class="card-text">SEM USO</p></div>
+            //     </div>
+            //   `;
+            // }
+              //   }
+             }
+            
         })
     }
 })
@@ -89,7 +105,7 @@ function editar_cliente (id) {
 
     $.ajax({
         type: "put", // NOME DO METODO HTTP QUE VAMOS USAR
-        url: "http://144.126.132.210:3334/api/v1/alarm"+id, //URL DE ONDE VOCE VAI BUSCAR
+        url: `http://144.126.132.210:3334/api/v1/alarm${id}`, //URL DE ONDE VOCE VAI BUSCAR
         data: {
             name: nome,
         },
@@ -103,4 +119,15 @@ function editar_cliente (id) {
 
     })
 
+
+}
+
+document.getElementById('formulario').addEventListener('submit', pesquisarcliente);
+
+function pesquisarcliente(e){
+
+    var cliente = document.getElementById('Pesquisar').value;
+    console.log(pesquisarcliente);
+
+    e.preventDefault();
 }
